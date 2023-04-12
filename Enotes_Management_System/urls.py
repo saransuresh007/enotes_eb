@@ -1,4 +1,4 @@
-"""Enotes_Management_System URL Configuration
+"""enotes_management_system URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from enotes.views import index,about,register,user_login,dashboard,profile,addNotes,viewNotes,editNotes,deleteNotes,changePassword,Logout
+from enotes.views import index,about,register,addNotes,viewNotes
+from enotes.views import user_login,dashboard,profile,editNotes,deleteNotes,changePassword,Logout
 
 
 urlpatterns = [
