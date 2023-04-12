@@ -28,8 +28,8 @@ def register(request):
             Signup.objects.create(user=user, ContactNo=c, About=ab, Role=role)
             error = "no"
         except:
-            error = "yes" 
-    if error :
+            error = "yes"
+    if error:
         print(error)         
     return render(request, 'register.html', locals())
 
@@ -47,7 +47,7 @@ def user_login(request):
                 error = "yes"
         except:
             error = "yes"
-    if error :
+    if error:
         print(error)
     return render(request, 'user_login.html', locals())
 
@@ -71,12 +71,12 @@ def profile(request):
         fname = request.POST['firstName']
         lname = request.POST['lastName']
         contactNo = request.POST['ContactNo']
-        about = request.POST['About']
+        about1 = request.POST['About']
 
         signup.user.first_name = fname
         signup.user.last_name = lname
         signup.ContactNo = contactNo
-        signup.About = about
+        signup.About = about1
 
         try:
             signup.save()
@@ -84,7 +84,7 @@ def profile(request):
             error = "no"
         except:
             error = "yes"
-    if error :
+    if error:
         print(error)     
     return render(request, 'profile.html', locals())
 
@@ -104,7 +104,7 @@ def addNotes(request):
             error = "no"
         except:
             error = "yes"
-    if error :
+    if error:
        print(error)
     return render(request, 'addNotes.html', locals())
 
