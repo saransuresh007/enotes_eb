@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import *
 from django.contrib.auth import authenticate, logout, login
+from .models import *
 
 
 # Create your views here.
@@ -30,7 +30,7 @@ def register(request):
         except:
             error = "yes"
     if error:
-        print(error)         
+        print(error)        
     return render(request, 'register.html', locals())
 
 def user_login(request):
@@ -85,7 +85,7 @@ def profile(request):
         except:
             error = "yes"
     if error:
-        print(error)     
+        print(error)
     return render(request, 'profile.html', locals())
 
 def addNotes(request):
@@ -105,7 +105,7 @@ def addNotes(request):
         except:
             error = "yes"
     if error:
-       print(error)
+        print(error)
     return render(request, 'addNotes.html', locals())
 
 def viewNotes(request):
