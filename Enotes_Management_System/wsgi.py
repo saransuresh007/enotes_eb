@@ -1,5 +1,5 @@
 """
-WSGI config for Enotes_Management_System project.
+WSGI config for Enotes_Management_Systemproject.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

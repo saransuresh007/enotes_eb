@@ -1,5 +1,5 @@
 """
-ASGI config for Enotes_Management_System project.
+ASGI config for Enotes_Management_Systemproject.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
