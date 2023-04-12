@@ -28,11 +28,9 @@ def register(request):
             Signup.objects.create(user=user, ContactNo=c, About=ab, Role=role)
             error = "no"
         except:
-            error = "yes"
-            
-        if error :
-            error = error
-            
+            error = "yes" 
+    if error :
+        print(error)         
     return render(request, 'register.html', locals())
 
 def user_login(request):
@@ -49,8 +47,8 @@ def user_login(request):
                 error = "yes"
         except:
             error = "yes"
-        if error :
-            error = error
+    if error :
+        print(error)
     return render(request, 'user_login.html', locals())
 
 def dashboard(request):
@@ -86,9 +84,8 @@ def profile(request):
             error = "no"
         except:
             error = "yes"
-        if error :
-            error = error
-            
+    if error :
+        print(error)     
     return render(request, 'profile.html', locals())
 
 def addNotes(request):
@@ -108,7 +105,7 @@ def addNotes(request):
         except:
             error = "yes"
     if error :
-        error = error
+       print(error)
     return render(request, 'addNotes.html', locals())
 
 def viewNotes(request):
@@ -137,7 +134,7 @@ def editNotes(request,pid):
         except:
             error = "yes"
     if error :
-        error = error
+        print(error)
     return render(request, 'editNotes.html', locals())
 
 def deleteNotes(request,pid):
@@ -166,7 +163,7 @@ def changePassword(request):
         except:
             error = "yes"
     if error :
-            error = error
+        print(error)
     return render(request, 'changePassword.html', locals())
 
 def Logout(request):
