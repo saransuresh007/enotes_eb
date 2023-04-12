@@ -44,7 +44,7 @@ jobs:
       - name: Set environment variable
         run: echo "export DJANGO_SETTINGS_MODULE=enotes_management_system.settings" >> $GITHUB_ENV
       - name: Run pylint
-        run: pylint --load-plugins=pylint_django Enotes_Management_System/
+        run: pylint --load-plugins=pylint_django enotes_management_system/
 
   deploy:
     runs-on: ubuntu-latest
