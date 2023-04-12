@@ -5,9 +5,6 @@ import sys
 
 from django.db import models
 
-# pylint: disable=C0103
-class MyModel(models.Model):
-    someField = models.CharField(max_length=50)
 
 def main():
     """Run administrative tasks."""
