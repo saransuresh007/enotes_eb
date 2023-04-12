@@ -3,9 +3,6 @@
 import os
 import sys
 
-from django.db import models
-
-
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Enotes_Management_System.settings')
