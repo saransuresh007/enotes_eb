@@ -33,22 +33,18 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8
+          python-version: '3.x'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Set environment variable
+        run: echo "export DJANGO_SETTINGS_MODULE=Enotes_Management_System.settings" >> $GITHUB_ENV
       - name: Run pylint
-        run: pylint --load-plugins pylint_django Enotes_Management_System/
-      - name: Generate pylint report
-        run: pylint --output-format=parseable Enotes_Management_System/ > pylint-report.txt || exit 0
-      - name: Upload pylint report
-        uses: actions/upload-artifact@v2
-        with:
-          name: pylint-report
-          path: pylint-report.txt
+        run: pylint --load-plugins=pylint_django Enotes_Management_System
 
   deploy:
     runs-on: ubuntu-latest
