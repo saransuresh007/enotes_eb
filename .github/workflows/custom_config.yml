@@ -37,6 +37,7 @@ jobs:
       - uses: enotes_eb/python-lint@test
         with:
           python-root-list: "tests"
+  deploy:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
