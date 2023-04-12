@@ -12,7 +12,7 @@ colorama==0.4.3
 cryptography==39.0.2
 dill==0.3.6
 channels==3.0.4
-django==4.0.0
+django
 django-jazzmin==2.6.0
 docker==4.4.4
 docker-compose==1.25.5
