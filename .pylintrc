@@ -1,0 +1,4 @@
+[pycodestyle]
+max-line-length = 240
+
+disable=C0301
