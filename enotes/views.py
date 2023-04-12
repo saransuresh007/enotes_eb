@@ -30,7 +30,7 @@ def register(request):
         except:
             error = "yes"
     if error:
-        print(error)        
+        print(error)    
     return render(request, 'register.html', locals())
 
 def user_login(request):
