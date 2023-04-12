@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from enotes.views import *
+from enotes.views import index,about,register,user_login,dashboard,profile,addNotes,viewNotes,editNotes,deleteNotes,changePassword,Logout
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

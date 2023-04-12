@@ -1,0 +1,16 @@
+[MASTER]
+# Specify the python version
+python=3.8
+
+[MESSAGES CONTROL]
+# Enable only certain messages
+disable=C0103,C0114,C0115,C0116,C0301,C0411,E1101,R0903,R0904,W0611,W1203,W1401,W1402,W1403,W1404,W1405,W1702
+
+[FORMAT]
+# Change the output format
+max-line-length=120
+
+[REPORTS]
+# Generate reports in various formats
+output-format=text
+report-file=pylint-report.txt
