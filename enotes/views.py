@@ -29,6 +29,10 @@ def register(request):
             error = "no"
         except:
             error = "yes"
+            
+        if error :
+            error = error
+            
     return render(request, 'register.html', locals())
 
 def user_login(request):
@@ -45,6 +49,8 @@ def user_login(request):
                 error = "yes"
         except:
             error = "yes"
+        if error :
+            error = error
     return render(request, 'user_login.html', locals())
 
 def dashboard(request):
@@ -53,6 +59,7 @@ def dashboard(request):
     user = User.objects.get(id=request.user.id)
     signup = Signup.objects.get(user=user)
     totalnotes = Notes.objects.filter(signup=signup).count()
+    print(totalnotes)
     return render(request, 'dashboard.html', locals())
 
 def profile(request):
@@ -79,6 +86,9 @@ def profile(request):
             error = "no"
         except:
             error = "yes"
+        if error :
+            error = error
+            
     return render(request, 'profile.html', locals())
 
 def addNotes(request):
@@ -97,6 +107,8 @@ def addNotes(request):
             error = "no"
         except:
             error = "yes"
+    if error :
+        error = error
     return render(request, 'addNotes.html', locals())
 
 def viewNotes(request):
@@ -105,6 +117,7 @@ def viewNotes(request):
     user = User.objects.get(id=request.user.id)
     signup = Signup.objects.get(user=user)
     notes = Notes.objects.filter(signup=signup)
+    print(notes)
     return render(request, 'viewNotes.html', locals())
 
 def editNotes(request,pid):
@@ -123,6 +136,8 @@ def editNotes(request,pid):
             error = "no"
         except:
             error = "yes"
+    if error :
+        error = error
     return render(request, 'editNotes.html', locals())
 
 def deleteNotes(request,pid):
@@ -150,6 +165,8 @@ def changePassword(request):
                 error = 'not'
         except:
             error = "yes"
+    if error :
+            error = error
     return render(request, 'changePassword.html', locals())
 
 def Logout(request):
