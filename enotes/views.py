@@ -65,7 +65,7 @@ def profile(request):
         return redirect('user_login')
     user = User.objects.get(id=request.user.id)
     signup = Signup.objects.get(user=user)
-
+    error = ""
     if request.method == "POST":
 
         fname = request.POST['firstName']
@@ -121,6 +121,7 @@ def editNotes(request,pid):
     if not request.user.is_authenticated:
         return redirect('user_login')
     notes = Notes.objects.get(id=pid)
+    error = ""
     if request.method == "POST":
         title = request.POST['Title']
         content = request.POST['Content']
